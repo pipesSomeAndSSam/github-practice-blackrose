@@ -3,19 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Starter Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
       background-color: #f9f9f9;
-    }
-    header, footer {
-      background: #333;
-      color: white;
-      padding: 1rem;
-      text-align: center;
     }
     main {
       margin: 2rem 0;
@@ -23,8 +17,15 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Website</h1>
+    <nav>
+        <ul class="flex flex-row-reverse border-1 h-15 items-center px-8 text-md sm:text-2xl">
+            <li class="mx-4"><a href="./contact.html">Contact</a></li>          
+            <li class="mx-4"><a href="./about.html">About</a></li>
+            <li class="mx-4"><a href="./incex.html">Home</a></li>
+        </ul>
+    </nav>
+  <header class="h-34 items-center flex bg-[#333] text-white text-2xl sm:text-4xl px-12">
+    <h1>Welcome to Blackrose</h1>
   </header>
 
   <main>
