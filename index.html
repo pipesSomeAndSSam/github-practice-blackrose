@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Starter Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    body.light {
+      background: #f9f9f9;
+      color: #000000;
+    }
+    body.dark {
+      background: #121212;
+      color: #f9f9f9;
+    }
+    main {
+      margin: 2rem 0;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+    .fa-github{
+        font-size: 24px;
+    }
+    .fa-square-facebook{
+        font-size: 24px;
+    }
+    .fa-square-linkedin{
+        font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+    <nav>
+        <ul class="flex flex-row-reverse h-15 items-center px-8 text-md sm:text-2xl">
+            <li class="mx-4"><a href="./contact.html">Contact</a></li>          
+            <li class="mx-4"><a href="./about.html">About</a></li>
+            <li class="mx-4"><a href="#">Home</a></li>
+        </ul>
+    </nav>
+  <header class="h-34 items-center flex bg-[#333] text-white text-2xl sm:text-4xl px-12">
+    <h1>Welcome to Blackrose</h1>
+  </header>
+
+  <main>
+    <h1 class="text-2xl">Hello World!</h1>
+    <p class="mb-8">Introducing our website with basic HTML CSS and JS featrues.</p>
+    <h1 id="theme">Light Mode</h1>
+
+    <button id="btn" onclick="toggleTheme()" class="border-4 border-black text-4xl p-8 rounded-2xl transition-colors duration-300">
+        Toggle Theme
+    </button>
+
+    <script>
+    document.body.classList.add("light");
+
+    function toggleTheme() {
+        document.body.classList.toggle("dark");
+        document.body.classList.toggle("light");
+
+        if (document.body.classList.contains("dark")) {
+        document.getElementById("theme").textContent = "Dark Mode";
+        document.getElementById("btn").classList.remove("border-black");
+        document.getElementById("btn").classList.add("border-white");
+        } else {
+        document.getElementById("theme").textContent = "Light Mode";
+        document.getElementById("btn").classList.remove("border-white");
+        document.getElementById("btn").classList.add("border-black");
+        }
+    }
+    </script>
+
+  </main>
+
+  <footer class="bg-[#333] text-white flex flex-wrap h-full items-center p-4 text-sm sm:text-md justify-between">
+    <p>&copy; 2025 Blackrose</p>
+    <div class="mb-5">
+        <h2 class="text-lg my-5">Follow us</h2>
+        <div class="flex flex-col gap-4">
+            <div class="flex flex-row gap-4 items-center">
+                <p>Justine Sala</p>
+                <a href="https://github.com/LostGheno"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/justin.sala.319#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/justin-sala-4b3950254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app&fbclid=IwY2xjawMdSG9leHRuA2FlbQIxMQABHrMK5bil7GLy_0q3bgPsqwGrocq7lUnCWHC7dJ1nB84jNH-O6NZH5_li3Dzl_aem_48v18PgOPO0qCKx40YXFbQ"><i class="fa-brands fa-square-linkedin"></i></a>
+            </div>
+            <div class="flex flex-row gap-4 items-center">
+                <p>Marylle Laguna</p>
+                <a href="https://github.com/slpyMryll"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/slpymryl#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/marylle-laguna-65b25334b/"><i class="fa-brands fa-square-linkedin"></i></a>
+            </div>
+            <div class="flex flex-row gap-4 items-center">
+                <p>Luisito Libardo</p>
+                <a href="https://github.com/loloyjayr33"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/luisitoomapaslibardojr#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fluisito-jr-libardo-85815b381&h=AT2iGdLabsdsFdneuC2R4BkOXxnSSRG07lxE_cGcmIwzZDIbmm9LN0VPvQKlx9KbM5lpELr8UDtc9MIb27m7o3TyEfaethChPL3T-GtremIT4QvtWdjdOhM4-pLctpsUURQZAw"><i class="fa-brands fa-square-linkedin"></i></a>
+            </div>
+            <div class="flex flex-row gap-4 items-center">                
+                <p>Reipoh Arradaza</p>
+                <a href="https://github.com/pipesSomeAndSSam"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/pipeessss#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/arradaza-reipoh-gabriel-b-83b615330/"><i class="fa-brands fa-square-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+  </footer>
+</body>
+
+</html>
