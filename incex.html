@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Starter Page</title>
+=======
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dark Mode</title>
+>>>>>>> e245ff7 (Add Dark/Light Mode Toggle)
   <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #000;
+      --header-footer-bg: #333;
+      --header-footer-text: #fff;
+    }
+
+    body.dark-mode {
+      --bg-color: #121212;
+      --text-color: #f1f1f1;
+      --header-footer-bg: #222;
+      --header-footer-text: #ddd;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
+<<<<<<< HEAD
       background-color: #f9f9f9;
     }
     main {
@@ -23,9 +45,44 @@
     }
     .fa-square-linkedin{
         font-size: 24px;
+=======
+      padding: 20px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header,
+    footer {
+      background: var(--header-footer-bg);
+      color: var(--header-footer-text);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      margin: 2rem 0;
+    }
+
+    .theme-toggle {
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    #theme-status {
+      margin-top: 0.5rem;
+      font-weight: bold;
+>>>>>>> e245ff7 (Add Dark/Light Mode Toggle)
     }
   </style>
 </head>
+
 <body>
     <nav>
         <ul class="flex flex-row-reverse border-1 h-15 items-center px-8 text-md sm:text-2xl">
@@ -40,7 +97,12 @@
 
   <main>
     <h2>Hello World</h2>
-    <p>This is a starter HTML template. You can add more content here.</p>
+    <p>This is a starter HTML template with dark mode toggle.</p>
+
+    <div class="theme-toggle">
+      <button onclick="toggleTheme()">Toggle Theme</button>
+      <div id="theme-status">Current Theme: Light</div>
+    </div>
   </main>
 
   <footer class="bg-[#333] text-white flex flex-wrap border-1 h-full items-center p-4 text-sm sm:text-md justify-between">
@@ -75,5 +137,15 @@
         </div>
     </div>
   </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      document.getElementById('theme-status').textContent =
+        `Current Theme: ${isDark ? 'Dark' : 'Light'}`;
+    }
+  </script>
 </body>
+
 </html>
